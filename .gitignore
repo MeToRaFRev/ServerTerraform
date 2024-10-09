@@ -1,5 +1,5 @@
 ##Terraform Gitignore
-
+.command.txt
 # Local .terraform directories
 .terraform.*
 .terraform/

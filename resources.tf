@@ -9,6 +9,13 @@ resource "aws_security_group" "ssh_access" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+    ingress {
+    from_port   = 9000
+    to_port     = 9000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -25,8 +32,8 @@ resource "aws_instance" "Coolify" {
   tags = {
     Name = var.instance_name
   }
-  root_block_device {
-    volume_size = 30 
-    volume_type = "gp3" 
-  }
+  # root_block_device {
+  #   volume_size = 30 
+  #   volume_type = "gp3" 
+  # }
 }
