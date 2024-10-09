@@ -1,0 +1,18 @@
+##Terraform Gitignore
+
+# Local .terraform directories
+.terraform.*
+.terraform/
+
+# .tfstate files
+*.tfstate
+
+# .tfstate files
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+#key and cert
+coolifykey
+coolifykey.pub
